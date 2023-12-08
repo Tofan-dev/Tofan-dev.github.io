@@ -1,18 +1,22 @@
 * {
   margin: 0;
 }
-.image-container {
-  background: url("/images/P305JQ1.png") center/cover no-repeat;
+.main-container {
+  background: url("/images/first-page-background.png") center/cover no-repeat;
   height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   color: white;
 }
 .buttons-container {
-  position: absolute;
-  bottom: 20%;
-  transform: translateY(-50%);
+  margin: auto;
+  position: relative;
+  top: 20%;
   text-align: center;
+}
+.buttons-container button {
+  margin: 0 5em;
 }
 .redirect {
   position: relative;
@@ -40,7 +44,7 @@
   content: "";
   position: absolute;
   inset: 2px;
-  background: #272822;
+  background: #222222;
 }
 
 .redirect span {
@@ -110,5 +114,34 @@
   }
   100% {
     box-shadow: #27272c;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .main-container {
+    background: url("/images/first-page-background-mobile.png") center/cover no-repeat;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4em;
+  }
+
+  .buttons-container button {
+    margin: 4em 0;
+  }
+
+  .redirect {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1.5rem 4rem;
+    transition: 0.2s;
   }
 }
