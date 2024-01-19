@@ -30,9 +30,11 @@
   font-size: 1rem;
   padding: 1rem 3rem;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .redirect:hover {
+  cursor: pointer;
   letter-spacing: 0.2rem;
   padding: 1.1rem 3.1rem;
   background: var(--clr);
