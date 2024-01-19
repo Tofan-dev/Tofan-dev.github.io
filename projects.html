@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOFWARE - Tofan Andrei Alin</title>
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="projects">
+          <div class="projects-list">
+            <h1 id="intro">Projects</h1>
+            <ul>
+              <li id="sport-e-commerce">
+                <a href="javascript:void(0)">Laravel Sport E-commerce</a>
+              </li>
+              <li id="appointment-app">
+                <a href="javascript:void(0)">Laravel Appointment App</a>
+              </li>
+            </ul>
+          </div>
+          <div class="projects-info">
+            <div id="intro-info" class="project-info">
+              I'm thrilled to showcase my growing skills and enthusiasm for
+              crafting engaging digital experiences. Here, you'll find a
+              snapshot of projects that highlight my commitment to creating
+              user-friendly websites and applications. From responsive designs
+              to efficient backend solutions, each project reflects my
+              dedication to learning and pushing the boundaries of web
+              development. Explore this portfolio, and let's embark on the
+              exciting journey of turning ideas into impactful web solutions
+              together!
+            </div>
+            <div id="sport-e-commerce-content" class="project-info hide">
+              <h2>Racket Shop</h2>
+              <p>
+                I completed this project as part of my bachelor's degree, with a
+                primary focus on the backend development. However, to further
+                enhance my skills, I took the initiative to incorporate React
+                into the project. Notably, this marked my inaugural experience
+                in seamlessly integrating Laravel and React, showcasing my
+                versatility in both backend and frontend technologies. This
+                application is a Content Management System tailored for
+                administrators, empowering them to efficiently manipulate the
+                database. Additionally, I implemented a compact shop page,
+                providing a user-friendly interface for seamless navigation and
+                interaction.
+                <a
+                  id="sport-e-commerce-github"
+                  href="https://github.com/tofware/laravel-sport-ecommerce"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+              </p>
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/8orPFkKPxW4?si=XvnkSoMOERUS7Prk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div id="appointment-app-content" class="project-info hide">
+              <h2>Appointment App</h2>
+              <p>
+                I successfully crafted this application as a demonstration of my
+                skills during my initial job interview. The primary focus was on
+                showcasing proficiency in creating CRUD applications, utilizing
+                Laravel for the backend and Bootstrap for the frontend. The
+                unique feature of the app was its capability to dynamically
+                filter and display only available dates when customers create
+                new appointments, thereby enhancing user experience.
+                <a
+                  id="sport-e-commerce-github"
+                  href="https://github.com/tofware/laravel-sport-ecommerce"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+              </p>
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/KhlUIWLIV_8?si=yRT92XgCnAksQ0yE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="home">
+            <a href="/"><i class="fa fa-arrow-left"></i></a>
+          </div>
+          <div class="socials"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const sportEcommerceProject = document.getElementById("sport-e-commerce");
+    const appointmentAppProject = document.getElementById("appointment-app");
+    const intro = document.getElementById("intro");
+
+    const projectInfo = document.getElementsByClassName("project-info");
+
+    sportEcommerceProject.addEventListener("click", function (e) {
+      toggleVisibility("sport-e-commerce-content");
+    });
+
+    appointmentAppProject.addEventListener("click", function (e) {
+      toggleVisibility("appointment-app-content");
+    });
+
+    intro.addEventListener("click", function (e) {
+      toggleVisibility("intro-info");
+    });
+
+    function toggleVisibility(id) {
+      for (let i = 0; i < projectInfo.length; i++) {
+        if (projectInfo[i].id == id) {
+          projectInfo[i].classList.remove("hide");
+          projectInfo[i].classList.add("show");
+        } else {
+          if (!projectInfo[i].classList.contains("hide")) {
+            projectInfo[i].classList.add("hide");
+            projectInfo[i].classList.remove("show");
+          }
+        }
+      }
+    }
+  </script>
+</html>

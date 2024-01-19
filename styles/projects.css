@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+.main-container {
+  background: url("/images/second-page-background.webp") center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #aae4e4;
+}
+.projects {
+  display: flex;
+  width: 100%;
+}
+.projects-list {
+  width: 20%;
+  padding: 20px;
+}
+.projects-list h1 {
+  margin-bottom: 40px;
+  background-image: linear-gradient(45deg, #9ae5e6, #00d4d3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.projects-list ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 400px;
+}
+.projects-list ul li {
+  padding-bottom: 14px;
+}
+.projects-list a,
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 4px;
+}
+.projects-list a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #9ae5e6, #00d4d3);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.2s ease-in;
+}
+.projects-list a:hover::before {
+  background-size: 100% 2px;
+}
+.projects-info {
+  width: 80%;
+  padding: 40px;
+  line-height: 25px;
+  text-align: center;
+  border-left: 1px solid #aae4e4;
+}
+.footer {
+  width: 100%;
+}
+.hide {
+  display: none;
+  animation: fadeOut 0.5s ease-in;
+}
+.show {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#intro {
+  cursor: pointer;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  margin: 0 5px;
+}
+.footer i {
+  font-size: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+.footer i:hover {
+  transform: scale(1.2);
+}
+#sport-e-commerce-github {
+  text-decoration: none;
+  color: white;
+  margin: 0 5px;
+}
+#sport-e-commerce-github i {
+  font-size: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+#sport-e-commerce-github i:hover {
+  transform: scale(1.2);
+}
+.home {
+  margin-left: 20px;
+}
+.socials {
+  margin-right: 20px;
+}
+.project-info h2 {
+  margin-bottom: 25px;
+}
+.project-info p {
+  margin-bottom: 25px;
+}
+.iframe {
+  width: 560px;
+  height: 315px;
+}
+@media screen and (max-width: 900px) {
+  .main-container {
+    height: 100%;
+  }
+  .projects {
+    display: block;
+  }
+  .projects-list {
+    width: 70%;
+  }
+  .projects-info {
+    width: 80%;
+    min-height: 65vh;
+    line-height: 25px;
+    text-align: center;
+    border-left: none;
+    padding-right: 0;
+  }
+  .iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .container {
+    border: none;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main-container {
+    height: 100%;
+  }
+  .projects-info {
+    line-height: 25px;
+    text-align: center;
+    border-left: none;
+    padding-right: 0;
+  }
+}

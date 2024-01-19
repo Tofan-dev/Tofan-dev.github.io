@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
 }
 .main-container {
   background: url("/images/first-page-background.webp") center/cover no-repeat;
