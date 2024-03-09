@@ -33,6 +33,9 @@
               <li id="appointment-app">
                 <a href="javascript:void(0)">Laravel Appointment App</a>
               </li>
+              <li id="expenses-app">
+                <a href="javascript:void(0)">Income and Expense PHP</a>
+              </li>
             </ul>
           </div>
           <div class="projects-info">
@@ -101,6 +104,25 @@
                 allowfullscreen
               ></iframe>
             </div>
+            <div id="expenses-app-content" class="project-info hide">
+              <h2>Income and Expense App</h2>
+              <p>
+                The app contains only the backend logic done using pure PHP
+              </p>
+                <p style="margin: 0;">Properties that were followed:</p>
+                <p style="margin: 0;">* income can be added</p>
+                <p style="margin: 0;">* expenses can be added</p>
+                <p style="margin: 0;">* expenses can be made from categories</p>
+                <p style="margin: 0;">* incomes can be made from categories</p>
+                <p style="margin: 0;">* category and sub-category can be added</p>
+                <p style="margin: 0;">* there will be a user model that can login and register</p>
+                <p style="margin: 0;">* the login and register contains validation</p>
+                <a
+                  id="expenses-app-github"
+                  href="https://github.com/tofware/ExpensesApp"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+            </div>
           </div>
         </div>
         <div class="footer">
@@ -115,6 +137,7 @@
   <script>
     const sportEcommerceProject = document.getElementById("sport-e-commerce");
     const appointmentAppProject = document.getElementById("appointment-app");
+    const expensesAppProject = document.getElementById("expenses-app");
     const intro = document.getElementById("intro");
 
     const projectInfo = document.getElementsByClassName("project-info");
@@ -125,6 +148,10 @@
 
     appointmentAppProject.addEventListener("click", function (e) {
       toggleVisibility("appointment-app-content");
+    });
+
+    expensesAppProject.addEventListener("click", function (e) {
+      toggleVisibility("expenses-app-content");
     });
 
     intro.addEventListener("click", function (e) {
